@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer } from 'react'
+import React, { useReducer, useEffect } from 'react'
 import reducer, { initialState } from '../redux/reducer'
 import Context from '../context'
 import PubSub from '../pubsub'
