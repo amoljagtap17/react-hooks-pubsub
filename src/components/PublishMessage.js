@@ -4,6 +4,7 @@ import { newMessage } from '../redux/actions'
 
 function PublishMessage() {
   const {
+    state: { username },
     pubsub: { publish }
   } = useAppContext()
   const [text, setText] = useState('')
@@ -13,7 +14,7 @@ function PublishMessage() {
   }
 
   const publishMessage = () => {
-    publish(newMessage(text))
+    publish(newMessage({ text, username }))
   }
 
   const handleKeyPress = event => {
