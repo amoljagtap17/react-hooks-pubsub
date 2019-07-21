@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import Context from '../context'
 import { newMessage } from '../redux/actions'
 
-function PublishMessage({ dispatch }) {
+function PublishMessage() {
+  const { dispatch } = useContext(Context)
   const [text, setText] = useState('')
 
   const updateText = event => {
